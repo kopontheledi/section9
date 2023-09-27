@@ -11,6 +11,7 @@ async function handler(req, res) {
             res.status(422).json({message: 'Invalid email address.'});
             return;
         }
+        MongoClient.connnect('mongodb+srv://kopontheledi2:bx34ZQ2WnF9PtwuG@cluster0.dsxgyrn.mongodb.net/newsletter?retryWrites=true&w=majority')
 
         try{
             const client = await connectDatabase()
