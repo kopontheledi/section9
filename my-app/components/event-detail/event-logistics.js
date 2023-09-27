@@ -1,20 +1,21 @@
-import Image from 'next/image';
-
 import AddressIcon from '../icons/address-icon';
-import DateIcon from '../icons/date-icon';
+import DateIcon from '../icons/arrow-right-icon';
 import LogisticsItem from './logistics-item';
 import classes from './event-logistics.module.css';
+import Image from 'next/image';
+
 
 function EventLogistics(props) {
   const { date, address, image, imageAlt } = props;
-
   const humanReadableDate = new Date(date).toLocaleDateString('en-US', {
     day: 'numeric',
     month: 'long',
     year: 'numeric',
   });
-  const addressText = address.replace(', ', '\n');
-
+  console.log(address, "mom , " ,'\n ', date)
+  console.log( date)
+  console.log( image)
+  const addressText = address
   return (
     <section className={classes.logistics}>
       <div className={classes.image}>
@@ -31,5 +32,11 @@ function EventLogistics(props) {
     </section>
   );
 }
-
 export default EventLogistics;
+
+
+
+
+
+
+
